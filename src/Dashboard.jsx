@@ -12,7 +12,7 @@ function Dashboard() {
   const fetchStudents = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/students",
+        "https://backend-d-43ss.onrender.com/api/students",
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -35,7 +35,7 @@ function Dashboard() {
   const addStudent = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/api/students",
+        "https://backend-d-43ss.onrender.com/api/students",
         {
           name,
           course
@@ -65,7 +65,7 @@ function Dashboard() {
   const deleteStudent = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/students/${id}`,
+        `https://backend-d-43ss.onrender.com/api/students/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
